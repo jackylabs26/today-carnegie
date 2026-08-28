@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F1F4F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1218" media="(prefers-color-scheme: dark)">
+<meta name="description" content="데일 카네기 인간관계 30원칙. 링크 하나로 오늘 날짜에 해당하는 원칙이 자동으로 열립니다.">
+<link rel="canonical" href="https://today-carnegie.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="오늘의 카네기 원칙">
+<meta property="og:title" content="오늘의 카네기 원칙 — 30원칙, 하루 한 장">
+<meta property="og:description" content="오늘 날짜에 해당하는 카네기 인간관계 원칙이 자동으로 열립니다.">
+<meta property="og:url" content="https://today-carnegie.vercel.app/">
+<meta property="og:image" content="https://today-carnegie.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="오늘의 카네기 원칙 — 30원칙, 하루 한 장">
+<meta name="twitter:description" content="오늘 날짜에 해당하는 카네기 인간관계 원칙이 자동으로 열립니다.">
+<meta name="twitter:image" content="https://today-carnegie.vercel.app/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E3A5F'/%3E%3Ctext x='16' y='22' font-size='16' font-family='serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E30%3C/text%3E%3C/svg%3E">
+<title>오늘의 카네기 원칙</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap">
+
+<style>
+:root{
+  --bg:#F1F4F7;
+  --surface:#FFFFFF;
+  --surface-2:#F7F9FB;
+  --ink:#141B24;
+  --ink-2:#4C5A6B;
+  --ink-3:#7E8B99;
+  --rule:#D9E0E8;
+  --rule-soft:#E8EDF2;
+  --accent:#1E3A5F;
+  --accent-ink:#1E3A5F;
+  --accent-soft:#E5EDF6;
+  --on-accent:#FFFFFF;
+  --brass:#9A6F2E;
+  --shadow:0 1px 2px rgba(20,27,36,.05), 0 12px 32px -18px rgba(20,27,36,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1218;
+    --surface:#151C25;
+    --surface-2:#111821;
+    --ink:#E3E9F0;
+    --ink-2:#9DAAB9;
+    --ink-3:#71808F;
+    --rule:#26313D;
+    --rule-soft:#1E2833;
+    --accent:#93B6E0;
+    --accent-ink:#B9D0EC;
+    --accent-soft:#17222F;
+    --on-accent:#0D1218;
+    --brass:#D3A65E;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 36px -20px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1218;
+  --surface:#151C25;
+  --surface-2:#111821;
+  --ink:#E3E9F0;
+  --ink-2:#9DAAB9;
+  --ink-3:#71808F;
+  --rule:#26313D;
+  --rule-soft:#1E2833;
+  --accent:#93B6E0;
+  --accent-ink:#B9D0EC;
+  --accent-soft:#17222F;
+  --on-accent:#0D1218;
+  --brass:#D3A65E;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 36px -20px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+  word-break:keep-all;
+}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- shell ---------- */
+.wrap{max-width:660px;margin:0 auto;padding:0 20px 72px}
+
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background:var(--bg);
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule-soft);
+}
+.topbar-in{
+  max-width:660px;margin:0 auto;padding:11px 20px;
+  display:flex;align-items:center;gap:12px;justify-content:space-between;
+}
+.brandmark{
+  display:flex;align-items:center;gap:9px;min-width:0;
+}
+.seal{
+  width:26px;height:26px;flex:none;border-radius:50%;
+  background:var(--accent);color:var(--on-accent);
+  display:grid;place-items:center;
+  font-family:"Hahmlet",serif;font-weight:600;font-size:11px;line-height:1;
+  letter-spacing:-.02em;
+}
+.brandtext{
+  font-size:12.5px;letter-spacing:.02em;color:var(--ink-2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.brandtext b{color:var(--ink);font-weight:500}
+.todaybtn{
+  flex:none;border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);
+  font-size:12px;letter-spacing:.02em;padding:6px 12px;border-radius:999px;cursor:pointer;
+  transition:border-color .15s, color .15s;
+}
+.todaybtn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.todaybtn[hidden]{display:none}
+
+/* ---------- hero ---------- */
+.hero{padding:44px 0 4px;position:relative}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;letter-spacing:.045em;
+  color:var(--brass);margin:0 0 22px;
+}
+.numline{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.numlabel{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+  color:var(--ink-3);writing-mode:vertical-rl;text-orientation:mixed;
+  padding-top:6px;
+}
+.bignum{
+  font-family:"Hahmlet",serif;font-weight:700;
+  font-size:clamp(76px,22vw,124px);line-height:.86;letter-spacing:-.04em;
+  color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.datechip{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.02em;
+  color:var(--ink-3);margin-left:auto;text-align:right;line-height:1.5;
+}
+h1{
+  font-family:"Hahmlet",serif;font-weight:600;
+  font-size:clamp(27px,7.2vw,40px);line-height:1.34;letter-spacing:-.02em;
+  margin:16px 0 14px;text-wrap:balance;color:var(--ink);
+}
+.enline{
+  font-family:"IBM Plex Mono",monospace;font-style:italic;font-weight:400;
+  font-size:13.5px;line-height:1.6;color:var(--ink-2);margin:0 0 30px;
+}
+.rule-brass{height:1px;background:var(--rule);border:0;margin:0 0 30px}
+
+/* ---------- meditation quote ---------- */
+.med{
+  background:var(--surface);border:1px solid var(--rule);border-radius:2px;
+  box-shadow:var(--shadow);
+  padding:26px 24px 20px;margin:0 0 38px;position:relative;
+}
+.med::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brass);
+}
+.med p{
+  font-family:"Hahmlet",serif;font-weight:500;
+  font-size:clamp(16px,4.4vw,18.5px);line-height:1.78;margin:0;color:var(--ink);
+  letter-spacing:-.01em;
+}
+.med .src{
+  margin-top:16px;padding-top:12px;border-top:1px dashed var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.03em;
+  color:var(--ink-3);text-align:right;font-style:normal;
+}
+
+/* ---------- body copy ---------- */
+.body-copy p{
+  font-size:16.5px;font-weight:300;line-height:1.95;margin:0 0 1.5em;color:var(--ink);
+  letter-spacing:-.003em;
+}
+.body-copy p.lead{font-weight:400}
+.body-copy blockquote{
+  margin:0 0 1.5em;padding:2px 0 2px 18px;border-left:2px solid var(--rule);
+}
+.body-copy blockquote p{font-size:15.5px;color:var(--ink-2);margin-bottom:1em}
+.body-copy blockquote p:last-child{margin-bottom:0}
+.body-copy .caption{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.045em;
+  color:var(--ink-3);margin:0 0 .9em;
+}
+.body-copy hr{border:0;height:1px;background:var(--rule-soft);margin:2.6em 0}
+
+.summary{
+  background:var(--accent-soft);border-radius:2px;padding:20px 22px;margin:0 0 34px;
+}
+.summary .caption{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  color:var(--accent-ink);margin:0 0 8px;
+}
+.summary p{margin:0;font-size:16px;font-weight:400;line-height:1.8;color:var(--ink)}
+
+.pending{
+  border:1px dashed var(--rule);border-radius:2px;padding:22px;margin:0 0 34px;
+  text-align:center;color:var(--ink-3);font-size:13.5px;line-height:1.7;
+}
+
+/* ---------- nav ---------- */
+.pager{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:44px 0 0;
+}
+.pager a{
+  display:block;text-decoration:none;background:var(--surface);
+  border:1px solid var(--rule);border-radius:2px;padding:14px 16px;
+  transition:border-color .15s,transform .15s;
+}
+.pager a:hover{border-color:var(--accent);transform:translateY(-1px)}
+.pager .dir{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  color:var(--ink-3);display:block;margin-bottom:5px;
+}
+.pager .t{font-size:13.5px;font-weight:400;line-height:1.5;color:var(--ink);display:block}
+.pager .next{text-align:right}
+
+/* ---------- index ---------- */
+.index{margin-top:56px;border-top:1px solid var(--rule);padding-top:34px}
+.index h2{
+  font-family:"Hahmlet",serif;font-weight:600;font-size:19px;margin:0 0 4px;letter-spacing:-.01em;
+}
+.index .sub{font-size:13px;color:var(--ink-3);margin:0 0 26px}
+.part{margin-bottom:26px}
+.part-h{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  color:var(--brass);margin:0 0 10px;
+  display:flex;align-items:center;gap:10px;
+}
+.part-h::after{content:"";flex:1;height:1px;background:var(--rule-soft)}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{border-bottom:1px solid var(--rule-soft)}
+.plist a{
+  display:flex;gap:14px;align-items:baseline;padding:9px 2px;text-decoration:none;
+  transition:color .15s;
+}
+.plist a:hover .pt{color:var(--accent-ink)}
+.plist .pn{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);
+  min-width:22px;font-variant-numeric:tabular-nums;
+}
+.plist .pt{font-size:14.5px;font-weight:300;line-height:1.6;color:var(--ink)}
+.plist a[aria-current="true"] .pn{color:var(--brass)}
+.plist a[aria-current="true"] .pt{color:var(--accent-ink);font-weight:500}
+
+/* ---------- usage note ---------- */
+.note{
+  margin-top:44px;background:var(--surface-2);border:1px solid var(--rule-soft);
+  border-radius:2px;padding:20px 22px;
+}
+.note h3{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  color:var(--ink-3);margin:0 0 12px;font-weight:500;
+}
+.note ul{margin:0;padding-left:18px}
+.note li{font-size:13.5px;line-height:1.8;color:var(--ink-2);margin-bottom:6px}
+.note li:last-child{margin-bottom:0}
+.note code{
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+  background:var(--accent-soft);color:var(--accent-ink);padding:1px 6px;border-radius:3px;
+}
+
+.foot{
+  margin-top:40px;padding-top:20px;border-top:1px solid var(--rule-soft);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.02em;
+  color:var(--ink-3);text-align:center;line-height:1.8;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brandmark">
+      <div class="seal">원칙</div>
+      <div class="brandtext"><b>카네기 인간관계 30원칙</b> · 하루 한 장</div>
+    </div>
+    <button class="todaybtn" id="todayBtn" hidden>오늘로</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <main id="view"></main>
+
+  <section class="index" id="indexSec">
+    <h2>30원칙 전체 보기</h2>
+    <p class="sub">매월 1일부터 30일까지, 날짜가 곧 원칙 번호입니다.</p>
+    <div id="indexBody"></div>
+  </section>
+
+  <section class="note">
+    <h3>사용 안내</h3>
+    <ul>
+      <li>이 링크 하나를 카톡으로 보내면, 여는 사람의 <b>그날 날짜에 해당하는 원칙</b>이 자동으로 열립니다. 매일 같은 링크를 그대로 쓰시면 됩니다.</li>
+      <li>특정 원칙을 바로 열려면 주소 끝에 <code>?d=28</code> 처럼 번호를 붙이세요.</li>
+      <li>31일에는 한 달 전체를 되돌아보는 <b>복습 페이지</b>가 열립니다.</li>
+      <li>날짜 판정 기준은 한국 시간(KST)입니다.</li>
+    </ul>
+  </section>
+
+  <p class="foot">
+    데일 카네기 『인간관계론』 30원칙<br>
+    G&amp;G BP · 하루 한 장 실천 노트
+  </p>
+</div>
+
+<script>
+const PARTS = [
+  {id:1, label:"Part 1 — 사람을 다루는 기본 방법", range:[1,3]},
+  {id:2, label:"Part 2 — 호감을 얻는 6가지 방법", range:[4,9]},
+  {id:3, label:"Part 3 — 사람을 설득하는 12가지 방법", range:[10,21]},
+  {id:4, label:"Part 4 — 반감 없이 사람을 변화시키는 9가지 방법", range:[22,30]}
+];
+
+const P = {
+  1:{t:"비난하거나 비평하거나 불평하지 마라", en:"Don't criticize, condemn or complain.",
+     s:"비난은 사람을 방어적으로 만들 뿐 바꾸지 못합니다. 상대를 고치려는 첫 마디를 삼키는 것이 모든 인간관계의 출발점입니다."},
+  2:{t:"솔직하고 진지하게 칭찬하라", en:"Give honest and sincere appreciation.",
+     s:"사람의 가장 깊은 욕구는 인정받고 싶은 마음입니다. 아첨이 아닌, 사실에 근거한 진심 어린 인정이 사람을 움직입니다."},
+  3:{t:"다른 사람의 열렬한 욕구를 불러일으켜라", en:"Arouse in the other person an eager want.",
+     s:"내가 원하는 것이 아니라 상대가 원하는 것에서 출발하세요. 설득의 유일한 길은 상대 스스로 하고 싶게 만드는 것입니다."},
+  4:{t:"다른 사람에게 진심으로 관심을 가져라", en:"Become genuinely interested in other people.",
+     s:"관심을 끌려고 애쓴 2년보다, 남에게 관심을 준 2개월이 더 많은 친구를 만듭니다."},
+  5:{t:"미소를 지어라", en:"Smile.",
+     s:"미소는 비용이 들지 않지만 가장 많은 것을 만들어냅니다. 표정은 입고 있는 옷보다 먼저 상대에게 도착합니다."},
+  6:{t:"이름을 기억하라, 이름은 그 사람에게 가장 달콤한 말이다", en:"Remember that a person's name is to that person the sweetest sound in any language.",
+     s:"이름을 정확히 불러 주는 것은 상대의 존재를 인정한다는 가장 짧은 표현입니다."},
+  7:{t:"경청하라, 상대가 자신에 대해 말하게 하라", en:"Be a good listener. Encourage others to talk about themselves.",
+     s:"말을 잘하는 사람보다 잘 듣는 사람이 더 좋은 대화 상대로 기억됩니다."},
+  8:{t:"상대방의 관심사에 맞추어 이야기하라", en:"Talk in terms of the other person's interests.",
+     s:"상대의 마음으로 통하는 길은 그가 가장 소중히 여기는 주제 위에 나 있습니다."},
+  9:{t:"상대방이 중요한 사람이라고 느끼게 하라, 진심으로", en:"Make the other person feel important — and do it sincerely.",
+     s:"'내가 대접받고 싶은 대로 남을 대접하라.' 이 한 문장이 모든 원칙을 관통합니다."},
+  10:{t:"논쟁을 피하는 것이 논쟁에서 이기는 유일한 방법이다", en:"The only way to get the best of an argument is to avoid it.",
+      s:"논쟁에서 이기면 논거를 얻지만 사람을 잃습니다. 이기지 않는 것이 이기는 길입니다."},
+  11:{t:"상대방의 의견을 존중하라, 결코 '당신이 틀렸다'고 말하지 마라", en:"Show respect for the other person's opinions. Never say, \"You're wrong.\"",
+      s:"틀렸다는 말은 상대의 지성이 아니라 자존심을 공격합니다. 그러면 마음의 문이 닫힙니다."},
+  12:{t:"잘못했으면 즉시 그리고 분명하게 인정하라", en:"If you are wrong, admit it quickly and emphatically.",
+      s:"스스로를 먼저 나무라면 상대는 더 이상 나무랄 것이 없어집니다."},
+  13:{t:"우호적으로 시작하라", en:"Begin in a friendly way.",
+      s:"한 방울의 꿀이 한 통의 쓸개즙보다 더 많은 파리를 잡습니다."},
+  14:{t:"상대방이 즉시 '예, 예'라고 대답하게 하라", en:"Get the other person saying \"yes, yes\" immediately.",
+      s:"동의할 수 있는 것부터 시작하세요. '아니오'로 시작한 대화는 되돌리기 어렵습니다."},
+  15:{t:"상대방이 더 많이 말하게 하라", en:"Let the other person do a great deal of the talking.",
+      s:"친구가 나를 앞서게 두면 친구를 얻고, 내가 앞서면 적을 만듭니다."},
+  16:{t:"그 아이디어가 상대방의 것이라고 느끼게 하라", en:"Let the other person feel that the idea is his or hers.",
+      s:"사람은 남이 강요한 생각보다 스스로 떠올린 생각을 훨씬 더 신뢰합니다."},
+  17:{t:"상대방의 입장에서 사물을 보려고 진지하게 노력하라", en:"Try honestly to see things from the other person's point of view.",
+      s:"상대가 왜 그렇게 생각하고 행동하는지 알면, 그의 성격과 행동을 이해하는 열쇠를 얻게 됩니다."},
+  18:{t:"상대방의 생각과 욕구에 공감하라", en:"Be sympathetic with the other person's ideas and desires.",
+      s:"\"그런 상황이라면 저도 똑같이 느꼈을 겁니다.\" 이 한마디가 대립을 대화로 바꿉니다."},
+  19:{t:"보다 고상한 동기에 호소하라", en:"Appeal to the nobler motives.",
+      s:"사람은 자신의 행동에 그럴듯한 이유와 진짜 이유를 함께 가집니다. 그럴듯한 쪽을 존중해 주세요."},
+  20:{t:"당신의 아이디어를 극적으로 표현하라", en:"Dramatize your ideas.",
+      s:"사실을 말하는 것으로는 부족합니다. 보이게 하고, 느끼게 하고, 기억에 남게 하세요."},
+  21:{t:"경쟁심을 자극하라", en:"Throw down a challenge.",
+      s:"일을 되게 하는 힘은 경쟁, 즉 이기고 싶다는 욕구, 자신을 증명하고 싶은 욕구에서 나옵니다."},
+  22:{t:"칭찬과 진심 어린 감사로 시작하라", en:"Begin with praise and honest appreciation.",
+      s:"면도 전에 비누거품을 바르듯, 아픈 말 앞에는 인정의 말을 먼저 놓으세요."},
+  23:{t:"잘못은 간접적으로 알게 하라", en:"Call attention to people's mistakes indirectly.",
+      s:"'그런데'를 '그리고'로 바꾸는 것만으로도 칭찬이 비난으로 변하는 것을 막을 수 있습니다."},
+  24:{t:"상대방을 비판하기 전에 자신의 잘못을 먼저 이야기하라", en:"Talk about your own mistakes before criticizing the other person.",
+      s:"자신도 완벽하지 않다고 먼저 인정하는 사람의 지적은 훨씬 듣기 쉽습니다."},
+  25:{t:"명령이 아니라 질문을 하라", en:"Ask questions instead of giving direct orders.",
+      s:"\"이렇게 하세요\"보다 \"이렇게 하면 어떨까요?\"가 자발성과 창의성을 살립니다."},
+  26:{t:"상대방의 체면을 세워 주어라", en:"Let the other person save face.",
+      s:"옳다는 사실보다 상대의 자존심이 더 오래 남습니다. 이기더라도 체면은 남겨 주세요."},
+  27:{t:"아주 작은 진전에도 칭찬하라, 진심으로 인정하고 아낌없이 칭찬하라", en:"Praise the slightest improvement and praise every improvement.",
+      s:"능력은 비판 아래서 시들고 격려 아래서 꽃핍니다. 작은 진전을 놓치지 마세요."},
+  28:{t:"상대방에게 훌륭한 명성을 갖도록 해주어라", en:"Give the other person a fine reputation to live up to.",
+      s:"사람은 자신에게 붙여진 이름대로 살아갑니다. 좋은 이름을 먼저 붙여 주세요.",
+      med:"평판 중에서 가장 중요한 것은 리더의 신용이다.\n당신이 그들을 신뢰하고 존경하고 있다고 느끼면,\n그들은 그 신뢰와 존경에 걸맞게 되기 위해 열심히 일할 것이다.",
+      medSrc:"2분 명상",
+      body:`<p class="lead">사람들을 잘 이끌기 위해서는 그들이 존경을 받고 있으며, 당신이 그들의 능력을 존경하고 있다는 사실을 보여 주어야 합니다.</p>
+<p>셰익스피어는 이렇게 말했습니다. "덕이 없어도, 덕이 있는 듯이 행동하라." 이 말은 당신이 지닌 장점이 없으면 장점을 가진 것처럼 생각하라는 의미입니다. 상대방에게 장점을 발휘하게 하려면, 그가 그 장점을 가지고 있는 것처럼 자주 말해 주세요. 좋은 평판을 듣게 되면, 그들은 결코 당신 기대에 어긋나지 않도록 노력할 것입니다.</p>
+<hr>
+<p class="caption">벨기에의 신데렐라, 마리</p>
+<p>조제트 르블랑은 그녀의 저서 『메터링크와 함께 한 내 생애의 선물』에서 벨기에 출신의 신데렐라에 대해 다음과 같이 쓰고 있습니다.</p>
+<blockquote>
+<p>우리 집 근처 호텔에서 일하는 심부름꾼 소녀가 내 식사를 배달해 왔다. 그 소녀는 '접시닦이 마리'였는데, 그런 호칭은 그녀가 허드렛일을 거드는 일을 했기 때문이었다. 소녀는 사팔뜨기에다 다리가 바깥쪽으로 굽어 있었으며 피부도 거칠었다.</p>
+<p>하루는 그 아이가 부르튼 손으로 마카로니 접시를 들고 왔을 때 나는 이렇게 말했다. "마리야, 넌 네 안에 지니고 있는 보배로운 것들을 잘 모르고 있구나."</p>
+<p>마리는 자신이 잘못이라도 한 듯 꼼짝 않고 서 있었다. 잠시 뒤 식탁 위에 접시를 놓고 가슴을 펴고는 천진스럽게 말했다. "마님, 마님이 말해 주지 않았으면 저는 그것을 정말 몰랐을 거예요." 마리는 의심하거나 의문을 제기하지 않았다.</p>
+<p>신념의 힘이란 바로 이런 것이다. 그 날 이후 마리는 자신의 가치를 인정했다. 그리고 더욱 신비한 변화는 마리 자신에게 일어났다. 감춰진 보물이 자기 안에 있다고 믿게 되자, 그녀는 얼굴과 몸을 정성스럽게 가꾸었다. 그녀의 몸에 젊음이 꽃피고 못생긴 얼굴도 밝아지기 시작했다.</p>
+<p>불과 두 달 후 마리는 주방장의 조카와 결혼을 하면서 이런 말을 했다. "저도 이제는 숙녀가 될 거예요. 제 안의 보물을 알게 해주셔서 감사해요."</p>
+</blockquote>
+<p>작은 칭찬 한 마디가 그 소녀의 인생을 바꿔놓은 것이다.</p>
+<hr>
+<p class="caption">거절당한 영업사원, 빌 파커</p>
+<p>플로리다 주 데이토나 비치에 있는 한 식품회사의 영업대표인 빌 파커는 신상품 출시로 매우 기분이 좋았습니다. 하지만 대형 식료품점에서 그것을 취급하지 않겠다는 말을 듣고는 속이 상했습니다. 빌은 퇴근 후 그 가게에 들러 다시 알아보기로 했습니다.</p>
+<blockquote>
+<p>"사장님, 오늘 아침에 여기를 다녀간 뒤 저희 신상품에 대해 충분히 설명하지 못했다는 것을 알게 되었습니다. 저는 사장님이 다른 사람의 말을 기꺼이 경청할 뿐만 아니라, 근거가 뚜렷하면 자신의 생각도 바꿀 수 있을 만큼 큰 인물이라는 점을 존경해 왔습니다. 제가 아침에 설명하지 못했던 점을 이야기할 수 있게 시간을 내주시면 고맙겠습니다."</p>
+</blockquote>
+<p>그 사장이 그의 제안을 거절했을까요? 자신에 대해 그처럼 좋은 평가를 들었는데 어떻게 거절할 수 있겠습니까?</p>
+<hr>
+<p class="caption">베이비시터 넬리를 맞이한 방법</p>
+<p>뉴욕에 사는 어네스트 젠트 부인은 넬리라는 베이비시터를 고용하여 월요일부터 일을 시켰습니다. 그녀는 넬리의 전 고용주에게 전화를 걸어, 넬리에게 다소 결점이 있다는 것을 알았습니다. 약속한 날짜에 넬리가 찾아오자, 부인은 그녀에게 이렇게 말했습니다.</p>
+<blockquote>
+<p>"반가워요. 그저께 당신이 일했던 집주인에게 전화를 걸어 당신에 대해 물어 보니 매우 정직하고 신뢰할 수 있으며, 요리 솜씨도 좋고 친절하게 아이들을 잘 돌본다고 하더군요. 당신이 입고 있는 옷가지가 깨끗하고 정결한 것만 보아도, 당신이 그 몸가짐처럼 집안 청소 또한 깨끗하게 해주리라 믿고 있어요. 우리들은 서로 잘 맞을 것 같군요."</p>
+</blockquote>
+<p>두 사람은 매우 잘해 나갔습니다. 넬리는 부인이 자기에게 기대를 걸고 있다고 생각했기 때문에, 그 기대에 어긋나지 않기 위해 열심히 일했습니다.</p>
+<hr>
+<p class="caption">말썽꾸러기 토미와 홉킨스 선생님</p>
+<p>"개에게 나쁜 이름을 지어 주느니, 차라리 그 개의 목을 매다는 편이 나을 것이다"는 속담이 있습니다. 반대로 좋은 이름을 붙여주면 어떤 일이 벌어지게 될까요?</p>
+<p>뉴욕 시 브루클린에서 새로 4학년 담임을 맡은 루스 홉킨스 선생님은 자기 학급의 명단을 받아보고는 걱정이 앞섰습니다. 말썽꾸러기로 소문난 토미가 자기 반에 배정되었기 때문입니다. 토미의 3학년 담임선생님은 다른 선생님들에게 토미에 대한 험담을 늘어놓았습니다. 토미는 단순한 말썽꾸러기가 아니었습니다. 남자친구들에겐 싸움을 걸고 여자친구들에겐 골탕을 먹였습니다. 게다가 선생님에게 대드는 일도 많았습니다. 토미가 지닌 유일한 장점은 학교에서 배운 것을 빨리 익힌다는 것이었습니다. 홉킨스 선생님은 토미 문제를 정면으로 부딪쳐서 해결하기로 결심했습니다.</p>
+<p>자기 반 학생들과 처음 인사를 하는 자리에서 홉킨스 선생님은 모든 학생들에게 한 마디씩 칭찬을 했습니다. "로즈야, 입고 있는 옷이 참 예쁘구나." "알리샤야, 넌 그림을 잘 그린다면서?" 토미의 차례가 되었을 때, 홉킨스 선생님은 토미의 눈을 똑바로 쳐다보며 이렇게 말했습니다.</p>
+<blockquote>
+<p>"토미야, 너는 타고난 리더지? 이번에 우리 반이 4학년에서 최고의 반이 될 수 있도록 네가 선생님을 도와주지 않겠니?"</p>
+</blockquote>
+<p>홉킨스 선생님은 처음 며칠 동안 토미가 하는 일마다 칭찬을 해주고 모범적인 학생이라고 추켜세우기도 하였습니다. 그런 높은 평가를 받자, 토미는 비록 아홉 살에 불과했지만 선생님을 실망시킬 수가 없었습니다. 토미는 선생님의 기대를 만족시켜 주었던 것입니다.</p>`},
+  29:{t:"격려하라, 고치기 쉬운 잘못으로 보이게 하라", en:"Use encouragement. Make the fault seem easy to correct.",
+      s:"\"당신은 재능이 있는데 아직 방법을 못 찾았을 뿐입니다.\" 이 말이 포기하려던 사람을 다시 일으킵니다."},
+  30:{t:"당신이 제안하는 것을 상대방이 기꺼이 하도록 만들어라", en:"Make the other person happy about doing the thing you suggest.",
+      s:"협조를 얻는 마지막 기술은, 그 일이 상대에게 어떤 이익이 되는지를 그의 언어로 말해 주는 것입니다."}
+};
+
+const KST = "Asia/Seoul";
+function kstParts(){
+  const f = new Intl.DateTimeFormat("ko-KR",{timeZone:KST,year:"numeric",month:"2-digit",day:"2-digit",weekday:"short"});
+  const o = {};
+  for(const p of f.formatToParts(new Date())) o[p.type]=p.value;
+  return {y:+o.year, m:+o.month, d:+o.day, w:o.weekday};
+}
+function partOf(n){ return PARTS.find(p => n>=p.range[0] && n<=p.range[1]); }
+
+const today = kstParts();
+const todayN = today.d > 30 ? 31 : today.d;
+
+function readParam(){
+  const m = location.search.match(/[?&]d=(\d{1,2})/);
+  if(!m) return null;
+  const n = +m[1];
+  return (n>=1 && n<=31) ? n : null;
+}
+
+let current = readParam() || todayN;
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+function renderPrinciple(n){
+  const p = P[n], pt = partOf(n);
+  const isToday = n === todayN;
+  const dateStr = isToday
+    ? `${today.y}. ${String(today.m).padStart(2,"0")}. ${String(today.d).padStart(2,"0")} (${today.w})`
+    : `매월 ${n}일`;
+
+  const med = p.med
+    ? `<div class="med"><p>${esc(p.med).replace(/\n/g,"<br>")}</p><div class="src">— ${esc(p.medSrc||"")}</div></div>`
+    : "";
+
+  const content = p.body
+    ? `<div class="body-copy">${p.body}</div>`
+    : `<div class="summary"><p class="caption">핵심</p><p>${esc(p.s)}</p></div>
+       <div class="pending">이 원칙의 본문은 준비 중입니다.<br>원본 자료가 등록되면 이 자리에 채워집니다.</div>`;
+
+  const summaryFirst = p.body
+    ? `<div class="summary"><p class="caption">한 줄 정리</p><p>${esc(p.s)}</p></div>`
+    : "";
+
+  const prev = n===1 ? 30 : n-1;
+  const next = n===30 ? 1 : n+1;
+
+  return `
+  <article class="hero">
+    <p class="eyebrow">${esc(pt.label)}</p>
+    <div class="numline">
+      <div class="numlabel">원칙</div>
+      <div class="bignum">${n}</div>
+      <div class="datechip">${esc(dateStr)}${isToday?"<br>오늘의 원칙":""}</div>
+    </div>
+    <h1>${esc(p.t)}</h1>
+    <p class="enline">${esc(p.en)}</p>
+    <hr class="rule-brass">
+    ${med}
+    ${summaryFirst}
+    ${content}
+  </article>
+  <nav class="pager">
+    <a href="?d=${prev}" data-d="${prev}"><span class="dir">← 이전 원칙 ${prev}</span><span class="t">${esc(P[prev].t)}</span></a>
+    <a class="next" href="?d=${next}" data-d="${next}"><span class="dir">다음 원칙 ${next} →</span><span class="t">${esc(P[next].t)}</span></a>
+  </nav>`;
+}
+
+function renderReview(){
+  const rows = PARTS.map(pt => {
+    const items = [];
+    for(let i=pt.range[0]; i<=pt.range[1]; i++){
+      items.push(`<li><a href="?d=${i}" data-d="${i}"><span class="pn">${i}</span><span class="pt">${esc(P[i].t)}</span></a></li>`);
+    }
+    return `<div class="part"><p class="part-h">${esc(pt.label)}</p><ul class="plist">${items.join("")}</ul></div>`;
+  }).join("");
+
+  return `
+  <article class="hero">
+    <p class="eyebrow">31일 · 한 달 되돌아보기</p>
+    <div class="numline">
+      <div class="numlabel">복습</div>
+      <div class="bignum">31</div>
+      <div class="datechip">${today.y}. ${String(today.m).padStart(2,"0")}. ${String(today.d).padStart(2,"0")} (${today.w})<br>복습의 날</div>
+    </div>
+    <h1>한 달 동안 지나온 30가지 원칙</h1>
+    <p class="enline">Review the thirty principles you walked through this month.</p>
+    <hr class="rule-brass">
+    <div class="med"><p>배운 것을 실천으로 옮기지 않으면<br>그것은 아직 배운 것이 아니다.</p><div class="src">— 한 달의 마무리</div></div>
+    <div class="summary"><p class="caption">오늘 할 일</p><p>아래 30가지 중 이번 달 가장 잘 지킨 원칙 하나와, 가장 어려웠던 원칙 하나를 골라 보세요. 다음 달의 출발점이 됩니다.</p></div>
+    ${rows}
+  </article>`;
+}
+
+function renderIndex(){
+  const html = PARTS.map(pt => {
+    const items = [];
+    for(let i=pt.range[0]; i<=pt.range[1]; i++){
+      const cur = i===current ? ` aria-current="true"` : "";
+      items.push(`<li><a href="?d=${i}" data-d="${i}"${cur}><span class="pn">${i}</span><span class="pt">${esc(P[i].t)}</span></a></li>`);
+    }
+    return `<div class="part"><p class="part-h">${esc(pt.label)}</p><ul class="plist">${items.join("")}</ul></div>`;
+  }).join("");
+  document.getElementById("indexBody").innerHTML = html;
+}
+
+function draw(scroll){
+  const view = document.getElementById("view");
+  view.innerHTML = current === 31 ? renderReview() : renderPrinciple(current);
+  document.getElementById("indexSec").hidden = (current === 31);
+  renderIndex();
+  document.getElementById("todayBtn").hidden = (current === todayN);
+  const t = current === 31 ? "31일 복습 · 카네기 30원칙" : `원칙 ${current} · ${P[current].t}`;
+  try{ document.title = t; }catch(e){}
+  if(scroll) window.scrollTo({top:0, behavior:"instant"});
+}
+
+function go(n){
+  current = n;
+  try{ history.replaceState(null,"",`?d=${n}`); }catch(e){}
+  draw(true);
+}
+
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-d]");
+  if(!a) return;
+  e.preventDefault();
+  go(+a.dataset.d);
+});
+
+document.getElementById("todayBtn").addEventListener("click", () => go(todayN));
+
+draw(false);
+</script>
+
+</body>
+</html>
