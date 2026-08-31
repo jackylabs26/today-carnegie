@@ -19,7 +19,7 @@ echo "▶ 3/5  원격 변경사항 가져오기"
 git fetch origin main
 if ! git merge-base --is-ancestor origin/main HEAD; then
   echo "   원격에 새 커밋이 있어 병합합니다"
-  git merge --no-edit origin/main || {
+  git merge --no-edit -X ours origin/main || {
     echo
     echo "   ⚠ 병합 충돌이 발생했습니다. 충돌 파일을 정리한 뒤"
     echo "     git add -A && git commit && git push 를 실행하세요."
