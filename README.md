@@ -3,6 +3,8 @@
 데일 카네기 『인간관계론』 30원칙을 **하루 한 장**씩 읽는 정적 페이지.
 링크 하나를 카톡으로 보내면, 여는 사람의 그날 날짜에 해당하는 원칙이 자동으로 열립니다.
 
+**서비스 주소: https://carnegie.jackyailabs.com/**
+
 ## 동작 규칙
 
 | 항목 | 규칙 |
@@ -17,29 +19,44 @@
 ```
 index.html   단일 파일 (HTML + CSS + JS, 빌드 불필요)
 og.png       카톡·SNS 링크 미리보기 이미지 (1200x630)
-vercel.json  캐시 헤더 설정
+CNAME        GitHub Pages 커스텀 도메인
+.nojekyll    Jekyll 빌드 비활성화
 ```
+
+## 페이지 구조 (원본 책과 동일)
+
+원칙 번호 + 제목 + 영문 원문 → 2분 명상 → 본문 → 원칙 N 요약 → 행동으로 옮겨 보세요
 
 ## 콘텐츠 추가 방법
 
 `index.html` 안의 `const P = { ... }` 객체에서 해당 번호를 찾아 필드를 채웁니다.
 
 ```js
-28:{ t:"제목", en:"English original",
-     s:"한 줄 정리",
-     med:"명상 인용문\n두 번째 줄",
-     medSrc:"2분 명상",
-     body:`<p>본문 HTML</p>` }
+29:{ t:"제목", en:"English original", s:"한 줄 정리",
+     med:"명상 인용문\n둘째 줄", medSrc:"2분 명상",
+     body:`<p>본문 HTML</p>`,
+     note:"부분 수록 안내 (선택)",
+     sumTitle:"요약 제목", sum:`<p>요약 본문</p>`,
+     act:`<p>실천 지침</p>`, motto:"원칙 문구" }
 ```
 
-`body`가 없으면 자동으로 "본문 준비 중" 안내가 표시됩니다.
+없는 필드는 해당 블록이 렌더되지 않습니다 (`body`가 없으면 "준비 중" 안내).
 
-## 배포
+본문에서 쓸 수 있는 태그: `<p class="lead">` 도입 문단, `<p class="caption">` 소제목,
+`<blockquote>` 인용, `<ol><li>` 번호 목록, `<hr>` 구분선.
+요약에서는 `<p class="pull">` 강조 인용.
+
+## 스크립트
 
 ```bash
-vercel --prod          # Vercel
-# 또는 GitHub Pages: main 브랜치 root 를 Pages 소스로 지정
+./push.sh "커밋 메시지"   # 변경사항 커밋 + 푸시
+./set-domain.sh          # 커스텀 도메인 연결 (최초 1회)
 ```
 
-배포 도메인이 바뀌면 `index.html` 상단의 `og:url` / `og:image` / `canonical` 주소를 함께
-수정해야 카톡 링크 미리보기가 정상 동작합니다.
+> Cowork 샌드박스 셸은 파일 삭제 권한이 없어 git 작업 시 `.git/*.lock` 이 남습니다.
+> 두 스크립트 모두 첫 단계에서 이를 정리합니다.
+
+## 도메인이 바뀌면
+
+`index.html` 상단의 `canonical` / `og:url` / `og:image` 세 곳과 `CNAME` 파일을
+함께 수정해야 카톡 링크 미리보기가 정상 동작합니다.

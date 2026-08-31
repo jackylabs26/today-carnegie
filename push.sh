@@ -9,4 +9,4 @@ git diff --cached --quiet && { echo "변경사항 없음"; exit 0; }
 git commit -m "${1:-콘텐츠 업데이트}"
 git push
 echo
-echo "1~2분 뒤 반영됩니다:  https://jackylabs26.github.io/today-carnegie/"
+echo "1~2분 뒤 반영됩니다:  https://carnegie.jackyailabs.com/"
